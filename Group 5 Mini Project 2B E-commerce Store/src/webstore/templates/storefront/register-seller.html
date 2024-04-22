@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% load static%}
+
+{% block content%}
+
+Seller Registration Page
+
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+
+    <form method="POST">
+    {% csrf_token %}
+        <label for="sname">Store Name:</label>
+        <input type="text" id="sname" name="sname" required><br>
+
+        <label for="desc">Description:</label>
+        <textarea type="text" id="desc" name="desc"></textarea><br>
+
+
+
+
+        <button type="submit" value="Submit"> Submit </button>
+    </form>
+
+
+
+{% endblock %}

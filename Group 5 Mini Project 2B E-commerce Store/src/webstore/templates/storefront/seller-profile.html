@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% load static%}
+
+{% block content%}
+
+<h2> Profile  </h2>
+
+<img src="{{request.user.pfp.url}}">
+
+{{request.user.first_name}} {{request.user.last_name}} <br>
+
+{{request.user.email}} {{request.user.phone}} <br>
+
+<button id="editUserButton">Edit User</button> <br>
+
+
+<h2> Seller Details </h2>
+
+{{seller.store_name}} <br>
+{{seller.desc|safe}} <br>
+{{seller.trust_score}} <br>
+
+<button id="editSellerButton">Edit Seller Information</button> <br>
+
+
+
+<!-- User Edit Modal -->
+<div id="userEditModal" class="modal" style="display: none;">
+    <!-- User Edit Form Goes Here -->
+<h2> Edit Profile </h2>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <input type="hidden" name="form_id" value="user">
+
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required><br>
+
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone"><br>
+
+        <label for="pfp">Profile Picture:</label>
+        <input type="file" id="pfp" name="pfp"><br>
+
+        <input type="submit" value="Update Profile">
+    </form>
+
+
+
+
+
+</div>
+
+<!-- Seller Edit Modal -->
+<div id="sellerEditModal" class="modal" style="display: none;">
+    <!-- Seller Edit Form Goes Here -->
+<h2> Edit Seller Details </h2>
+
+<form method="POST">
+{% csrf_token %}
+        <input type="hidden" name="form_id" value="seller">
+
+    <label for="store_name">Store Name:</label>
+    <input type="text" id="store_name" name="store_name" maxlength="256" required>
+    <br>
+
+    <label for="desc">Description:</label>
+    <textarea id="desc" name="desc"></textarea>
+    <br>
+
+    
+
+    <input type="submit" value="Submit">
+</form>
+
+
+</div>
+
+
+
+<script>
+const userEditButton = document.getElementById('editUserButton');
+const sellerEditButton = document.getElementById('editSellerButton');
+const userEditModal = document.getElementById('userEditModal');
+const sellerEditModal = document.getElementById('sellerEditModal');
+
+userEditButton.addEventListener('click', () => {
+    userEditModal.style.display = 'block';
+    sellerEditModal.style.display = 'none';
+
+});
+
+sellerEditButton.addEventListener('click', () => {
+    sellerEditModal.style.display = 'block';
+    userEditModal.style.display = 'none';
+
+});
+
+
+</script>
+
+
+
+
+
+{% endblock %}

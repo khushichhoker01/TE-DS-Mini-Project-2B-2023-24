@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% load static%}
+
+{% block content%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plotly Graphs</title>
+    <!-- Include Plotly.js library -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+
+
+    <h1>User Pie Chart</h1>
+    <!-- Render the user pie chart -->
+    {{ prod_pie | safe }}
+
+    <h1>Seller Bar Chart</h1>
+    <!-- Render the seller bar chart -->
+    {{ seller_bar_html | safe }}
+</body>
+</html>
+
+{% endblock %}

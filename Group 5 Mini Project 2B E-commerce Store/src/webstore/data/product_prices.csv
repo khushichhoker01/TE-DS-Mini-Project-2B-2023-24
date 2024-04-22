@@ -1,0 +1,101 @@
+Product Name,Brand Name,Specifications,Description,Category,min_price,average_selling_price,max_price
+Samsung 55" 4K Smart TV,Samsung,55" 4K UHD,Smart LED TV with HDR,TVs,40000,50000,60000
+LG 65" OLED 4K Ultra HD TV,LG,65" OLED 4K UHD,OLED Smart TV with Dolby Vision,TVs,60000,75000,90000
+Sony 50" Full HD LED TV,Sony,50" Full HD,LED TV with Motionflow XR,TVs,30000,37500,45000
+TCL 43" Roku Smart TV,TCL,43" 1080p,Smart LED TV with Roku OS,TVs,25000,31250,37500
+Vizio 60" 4K HDR Smart TV,Vizio,60" 4K UHD,Smart LED TV with Dolby Vision,TVs,45000,56250,67500
+Hisense 55" 4K Android TV,Hisense,55" 4K UHD,Android Smart TV with Voice Remote,TVs,40000,50000,60000
+Philips 70" 4K HDR TV,Philips,70" 4K UHD,HDR LED TV with Ambilight,TVs,70000,87500,105000
+Panasonic 65" 4K Ultra HD TV,Panasonic,65" 4K UHD,Smart LED TV with Dolby Atmos,TVs,60000,75000,90000
+Sharp 50" 4K Android TV,Sharp,50" 4K UHD,Android Smart TV with Google Assistant,TVs,35000,43750,52500
+Toshiba 55" Fire TV Edition,Toshiba,55" 4K UHD,Fire TV Edition Smart LED TV,TVs,40000,50000,60000
+Samsung 75" QLED 8K TV,Samsung,75" 8K QLED,QLED TV with Quantum Processor 8K,TVs,100000,125000,150000
+LG 55" NanoCell 4K TV,LG,55" 4K NanoCell,NanoCell Smart TV with ThinQ AI,TVs,55000,68750,82500
+Sony 65" 4K HDR Android TV,Sony,65" 4K UHD,Android Smart TV with X1 Processor,TVs,70000,87500,105000
+TCL 55" QLED 4K Android TV,TCL,55" 4K QLED,Android Smart TV with Quantum Dot,TVs,75000,93750,112500
+Vizio 65" P-Series Quantum TV,Vizio,65" 4K UHD,P-Series Quantum Smart TV,TVs,80000,100000,120000
+Hisense 50" 4K Roku TV,Hisense,50" 4K UHD,Roku Smart LED TV with Dolby Vision,TVs,40000,50000,60000
+Philips 55" 4K Android TV,Philips,55" 4K UHD,Android Smart TV with P5 Processor,TVs,60000,75000,90000
+Panasonic 58" 4K HDR TV,Panasonic,58" 4K UHD,HDR LED TV with Dolby Vision,TVs,65000,81250,97500
+Sharp 65" 4K Aquos TV,Sharp,65" 4K UHD,Aquos Smart LED TV with Motion Rate 120,TVs,70000,87500,105000
+Toshiba 43" HD Smart TV,Toshiba,43" 720p,HD Smart LED TV with Fire TV,TVs,30000,37500,45000
+Organic Avocado,Green Farms,1 piece,Fresh organic avocado,Food and Groceries,50,62,75
+Whole Wheat Bread,Healthy Harvest,800g loaf,Whole wheat bread for healthy living,Food and Groceries,40,50,60
+Organic Eggs,Happy Hens,12 count,Farm-fresh organic eggs,Food and Groceries,70,87,105
+Almond Milk,Silk,1 quart,Non-dairy almond milk,Food and Groceries,30,37,45
+Wild-caught Salmon,Fresh Catch,200g fillet,Fresh wild-caught salmon fillet,Food and Groceries,150,187,225
+Organic Spinach,Green Leaf Farms,250g bag,Fresh organic spinach leaves,Food and Groceries,20,25,30
+Quinoa,Healthy Grains,500g pack,Organic quinoa grains,Food and Groceries,80,100,120
+Greek Yogurt,Authentic Yogurt Co.,500g tub,Greek-style yogurt with live cultures,Food and Groceries,60,75,90
+Organic Apples,Orchard Delight,1kg bag,Fresh organic apples,Food and Groceries,80,100,120
+Extra Virgin Olive Oil,Terra Verde,500ml bottle,Cold-pressed extra virgin olive oil,Food and Groceries,50,62,75
+Brown Rice,Whole Harvest,1kg pack,Whole grain brown rice,Food and Groceries,60,75,90
+Organic Chicken Breast,Farm Fresh Organics,500g pack,Fresh organic chicken breast,Food and Groceries,120,150,180
+Raw Honey,Nature's Bounty,500g jar,Unprocessed raw honey,Food and Groceries,80,100,120
+Mixed Berries,Forest Fresh,300g pack,Frozen mixed berries,Food and Groceries,50,62,75
+Chia Seeds,Superfoods Inc.,250g pack,Organic chia seeds,Food and Groceries,70,87,105
+Grass-fed Beef,Prime Cuts,400g pack,Grass-fed beef steak,Food and Groceries,200,250,300
+Gluten-free Pasta,Healthy Eats,350g pack,Gluten-free pasta made from quinoa,Food and Groceries,80,100,120
+Organic Kale,Green Leaf Farms,200g bunch,Fresh organic kale leaves,Food and Groceries,30,37,45
+Coconut Water,Island Bliss,1 liter carton,Pure coconut water,Food and Groceries,40,50,60
+Organic Black Beans,Natural Harvest,500g pack,Organic canned black beans,Food and Groceries,50,62,75
+Google Nest Thermostat,Google,Smart thermostat,Programmable thermostat with energy-saving features,Smart Home Appliances,6000,7500,9000
+Ring Video Doorbell,Ring,1080p HD video,Smart doorbell with motion detection,Smart Home Appliances,8000,10000,12000
+Philips Hue Smart Bulbs,Philips,White and color ambiance bulbs,Smart LED bulbs with app control,Smart Home Appliances,4000,5000,6000
+Amazon Echo Dot (4th Gen),Amazon,Echo Dot smart speaker,Smart speaker with Alexa voice control,Smart Home Appliances,3000,3750,4500
+Nest Hello Video Doorbell,Google,HD video with HDR,Smart doorbell with facial recognition,Smart Home Appliances,10000,12500,15000
+Ecobee Smart Thermostat,Ecobee,Smart thermostat with voice control,Energy-saving thermostat with room sensors,Smart Home Appliances,7000,8750,10500
+Samsung SmartThings Hub,Samsung,Smart home hub,Connects smart devices for centralized control,Smart Home Appliances,5000,6250,7500
+August Smart Lock Pro,August,Smart door lock,Keyless entry with smartphone control,Smart Home Appliances,9000,11250,13500
+LIFX Smart LED Strip,LIFX,Color-changing LED strip,Smart LED strip with Wi-Fi control,Smart Home Appliances,3500,4375,5250
+Wyze Cam Pan,Wyze,1080p HD pan-tilt camera,Smart security camera with motion tracking,Smart Home Appliances,6000,7500,9000
+Roomba i7+ Robot Vacuum,iRobot,Self-emptying vacuum robot,Smart vacuum cleaner with mapping technology,Smart Home Appliances,60000,75000,90000
+Nest Learning Thermostat,Google,Learning thermostat,Programmable thermostat with adaptive technology,Smart Home Appliances,10000,12500,15000
+Ring Spotlight Cam,Ring,1080p HD camera,Smart security camera with built-in spotlight,Smart Home Appliances,12000,15000,18000
+TP-Link Kasa Smart Plug,TP-Link,Smart plug,Wi-Fi enabled smart plug for remote control,Smart Home Appliances,2000,2500,3000
+Amazon Echo Show 10 (3rd Gen),Amazon,Smart display,Smart display with motion tracking and Alexa,Smart Home Appliances,15000,18750,22500
+Arlo Pro 3 Security Camera,Arlo,2K HDR camera,Wire-free smart security camera system,Smart Home Appliances,18000,22500,27000
+Wemo Smart Light Switch,Wemo,Smart light switch,Control lights remotely with smartphone,Smart Home Appliances,3000,3750,4500
+Google Nest Protect Smoke Detector,Google,Smart smoke detector,Smoke and carbon monoxide detector with alerts,Smart Home Appliances,8000,10000,12000
+Sonos One Smart Speaker,Sonos,Smart speaker with voice control,Wireless smart speaker with built-in Alexa,Smart Home Appliances,12000,15000,18000
+Eufy RoboVac 11S Robot Vacuum,Eufy,Slim robot vacuum,Quiet smart vacuum cleaner with boostIQ technology,Smart Home Appliances,25000,31250,37500
+Apple MacBook Pro (13-inch),Apple,13.3" Retina display,Powerful laptop with M1 chip,Laptops,90000,112500,135000
+Dell XPS 13,Dell,13.4" InfinityEdge display,Ultra-portable laptop with Intel Core processor,Laptops,70000,87500,105000
+HP Spectre x360,HP,13.3" 4K touchscreen,Convertible laptop with Intel Core i7 processor,Laptops,80000,100000,120000
+Lenovo ThinkPad X1 Carbon,Lenovo,14" FHD display,Ultra-lightweight business laptop,Laptops,60000,75000,90000
+Microsoft Surface Laptop 4,Microsoft,13.5" PixelSense display,Thin and light laptop with AMD Ryzen processor,Laptops,75000,93750,112500
+Asus ZenBook 14,Asus,14" Full HD display,Ultra-slim laptop with Intel Core i7 processor,Laptops,65000,81250,97500
+Acer Swift 3,Acer,14" Full HD IPS display,Thin and light laptop with AMD Ryzen 5 processor,Laptops,50000,62500,75000
+Razer Blade 15,Razer,15.6" 4K OLED touchscreen,Gaming laptop with NVIDIA GeForce RTX 30 series GPU,Laptops,120000,150000,180000
+Lenovo Yoga C940,Lenovo,14" 4K touchscreen,Convertible laptop with Intel Core i7 processor,Laptops,90000,112500,135000
+HP Envy 13,HP,13.3" Full HD display,Stylish laptop with Intel Core i5 processor,Laptops,60000,75000,90000
+Dell Inspiron 15,Dell,15.6" Full HD display,Budget-friendly laptop with Intel Core i3 processor,Laptops,40000,50000,60000
+Apple MacBook Air (M1),Apple,13.3" Retina display,Lightweight laptop with M1 chip,Laptops,80000,100000,120000
+Microsoft Surface Pro 8,Microsoft,13" PixelSense display,Convertible tablet-laptop with Intel Core processor,Laptops,90000,112500,135000
+Asus ROG Zephyrus G14,Asus,14" QHD display,Gaming laptop with AMD Ryzen 9 processor and NVIDIA GeForce RTX 30 series GPU,Laptops,150000,187500,225000
+Acer Predator Helios 300,Acer,15.6" Full HD 144Hz display,High-performance gaming laptop with Intel Core i7 processor and NVIDIA GeForce RTX 30 series GPU,Laptops,120000,150000,180000
+HP Pavilion 15,HP,15.6" Full HD display,Budget-friendly laptop with AMD Ryzen 5 processor,Laptops,50000,62500,75000
+Lenovo Legion 5,Lenovo,15.6" Full HD 120Hz display,Gaming laptop with AMD Ryzen 7 processor and NVIDIA GeForce RTX 30 series GPU,Laptops,100000,125000,150000
+Dell Latitude 14,Dell,14" Full HD display,Business laptop with Intel Core i5 processor,Laptops,70000,87500,105000
+Samsung Galaxy Book Pro,Samsung,15.6" AMOLED display,Ultra-slim laptop with Intel Core i7 processor,Laptops,90000,112500,135000
+Google Pixelbook Go,Google,13.3" Full HD touchscreen,Ultra-portable Chromebook with Intel Core processor,Laptops,60000,75000,90000
+iPhone 13,Apple,6.1" Super Retina XDR display,Flagship smartphone with A15 Bionic chip,Mobiles and Accessories,80000,100000,120000
+Samsung Galaxy S21 Ultra,Samsung,6.8" Dynamic AMOLED display,High-end smartphone with Exynos 2100 processor,Mobiles and Accessories,90000,112500,135000
+Google Pixel 6 Pro,Google,6.7" OLED display,Top-tier smartphone with Tensor chip,Mobiles and Accessories,85000,106250,127500
+OnePlus 9 Pro,OnePlus,6.7" Fluid AMOLED display,Premium smartphone with Snapdragon 888 processor,Mobiles and Accessories,80000,100000,120000
+Xiaomi Mi 11,Xiaomi,6.81" AMOLED display,Flagship smartphone with Snapdragon 888 processor,Mobiles and Accessories,70000,87500,105000
+iPhone SE (2022),Apple,4.7" Retina HD display,Compact smartphone with A15 Bionic chip,Mobiles and Accessories,50000,62500,75000
+Samsung Galaxy Z Fold 3,Samsung,7.6" Dynamic AMOLED 2X display,Foldable smartphone-tablet hybrid with Snapdragon 888 processor,Mobiles and Accessories,150000,187500,225000
+Google Pixel Buds 2,Google,True wireless earbuds,Wireless earbuds with adaptive sound,Mobiles and Accessories,10000,12500,15000
+AirPods Pro,Apple,True wireless earbuds,Active noise cancellation and transparency mode,Mobiles and Accessories,25000,31250,37500
+Samsung Galaxy Watch 4,Samsung,Smartwatch,Health and fitness tracking with Wear OS,Mobiles and Accessories,35000,43750,52500
+Fitbit Charge 5,Fitbit,Activity tracker,Advanced health and fitness features,Mobiles and Accessories,15000,18750,22500
+OnePlus Buds Pro,OnePlus,True wireless earbuds,Noise cancellation and Dolby Atmos support,Mobiles and Accessories,10000,12500,15000
+Xiaomi Mi Band 6,Xiaomi,Fitness tracker,AMOLED display with 24/7 heart rate monitoring,Mobiles and Accessories,5000,6250,7500
+iPhone 13 Pro Max,Apple,6.7" Super Retina XDR display,Pro-level smartphone with A15 Bionic chip,Mobiles and Accessories,120000,150000,180000
+Samsung Galaxy Note 20 Ultra,Samsung,6.9" Dynamic AMOLED 2X display,Flagship phablet with S Pen support,Mobiles and Accessories,80000,100000,120000
+Google Pixel Stand,Google,Wireless charging stand,Fast wireless charging with Google Assistant integration,Mobiles and Accessories,5000,6250,7500
+AirPods Max,Apple,Over-ear headphones,High-fidelity audio with active noise cancellation,Mobiles and Accessories,50000,62500,75000
+Samsung Galaxy Buds Pro,Samsung,True wireless earbuds,Intelligent ANC and immersive sound,Mobiles and Accessories,15000,18750,22500
+OnePlus Nord 2,OnePlus,6.43" Fluid AMOLED display,Mid-range smartphone with MediaTek Dimensity 1200-AI processor,Mobiles and Accessories,30000,37500,45000
+Xiaomi Redmi Note 11,Xiaomi,6.43" AMOLED display,Budget-friendly smartphone with MediaTek Helio G96 processor,Mobiles and Accessories,15000,18750,22500
