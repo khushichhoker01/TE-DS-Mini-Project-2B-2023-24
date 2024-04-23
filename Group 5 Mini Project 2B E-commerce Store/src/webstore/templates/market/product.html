@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="w-full flex flex-col items-center justify-center mt-16">
+
+    <div class=" w-4/5 h-screen flex flex-row justify-between items-center  border-b-2 border-black">
+            <div class="h-full flex flex-col items-center p-16 justify-center  w-1/2">
+                <div id="mainImage" class="bg-gray-900 h-96 w-full border-2 border-black rounded-md">
+                    {% for i in imgs %}
+                    <img class="object-cover h-full w-full " src="{{i.img.url}}">
+                    {% endfor %}
+                </div>
+            </div>
+         
+        <div class="h-full w-1/2 flex flex-col justify-center items-start">
+            <p class="font-normal font-medium text-xs py-2">@ {{product.product.brand_name}}</p>
+            <a href = "#" class="text-gray-950 font-bold text-6xl">{{product.product.product_name|upper}}</a>
+            <div class="py-3 text-4xl text-yellow-700">
+                ★★★★★
+            </div>
+            <p class="font-light text-xs pt-8">{{product.product.desc}}
+                </p>
+                <p class="text-lg font-normal mt-4"> <span class="font-semibold">PRICE</span> : {{product.optimized_price}} Rs</p>
+                <h2 class="font-semibold text-xl mb-2">Features</h2>
+                <ul class=" font-light text-md list-disc mt-2 pl-4">
+                    <li>{{product.product.specs}}</li>
+                </ul>
+                <form method="POST">
+                {% csrf_token %}
+                {% if user.is_authenticated %}
+                    <button type='submit' class="bg-red-700 text-white px-8 py-2 mt-6 -ml-1 rounded-full border-2 border-gray-800 font-normal hover:bg-red-900 transition-colors duration-300 ease-in-out">
+                        BUY
+                    </button>   
+                {% else %}
+                    <h2 class="font-semibold text-xl mb-2">Please sign in to buy</h2>
+                {% endif %}
+                </form>
+        </div>
+    </div>
+
+    <div class="w-4/5 py-8 h-full flex flex-col border-b-2 border-black overflow-hidden relative">
+        <h1 class="pb-2">REVIEWS</h1>
+        <div class="swiper-container">
+            <div class="swiper-wrapper flex items-center justify-start ">
+                <!-- Add more swiper-slide elements for additional cards --> {% for review in reviews %}
+                <div class="swiper-slide">
+                    <div class="w-full flex items-center justify-center">
+                        <div class="card bg-gray-300 w-4/5 h-auto rounded-3xl flex flex-col justify-center items-start shadow-xl border border-black pb-4 hover:shadow-2xl transition duration-300 ease-in-out">
+                            <div class="w-full h-1/4 p-6 pb-0 flex flex-row items-center justify-between">
+                                <h1 class="text-gray-800 font-bold text-4xl">{{review.title}}</h1>
+                                <div class="w-full flex flex-row items-center justify-end">
+                                    <h1 class="text-gray-800 font-bold text-md mr-2">
+                                        <span class="font-normal"> {{review.reviewer.first_name|upper}} {{review.reviewer.last_name|upper}} </span>
+                                    </h1>
+                                    <div class="w-6 h-6 border border-gray-600 rounded-full overflow-hidden">
+                                        <img src="{{review.reviewer.pfp.url}}" alt="Image 3" class="w-full h-full object-cover rounded-md">
+                                    </div>  
+                                </div>
+                            </div>                            
+                            
+                            <div class="h-full w-full flex flex-row">
+                                <div class="h-full w-1/2 p-4 ml-2">
+                                    <div class="w-full h-72 border border-black rounded-2xl overflow-hidden">
+                                        <img src="https://spectrum-brand.com/cdn/shop/products/geometric-foam-styling-props-for-photography-large-circle-18cm-powder-blue-lifestyle-bts-2_a1d3f29b-21c9-471d-9e03-f041b94fdcb5.jpg?v=1701779127" alt="Image 3" class="w-full h-full object-cover rounded-md">
+                                    </div>                                            
+                                </div>
+                                <div class="h-full w-1/2 p-6 text-justify">
+                                    <div class="text-4xl text-yellow-800">
+                                        ★★★
+                                    </div>
+                                    <p class="font-light text-md mt-4 pr-4">{{review.text}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                <!-- Add more swiper-slide elements for additional cards -->
+
+                
+                <!-- Add more swiper-slide elements for additional cards -->
+            </div>
+            <!-- Pagination outside of swiper-wrapper but within swiper-container -->
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>        
+    </div>
+
+
+    <div class="flex flex-col items-center justify-center w-full">
+        <div class="h-5/6 w-4/5 flex flex-col border-b-2 border-black pb-8">
+            <h4 class="text-base font-light py-4">SIMILAR</h4>
+            <div class="wrapper overflow-x-auto items-center w-full flex flex-row flex-shrink-0">
+                 <!-- Card 1 -->{% for list in listings %}
+            <a href="{% url 'product' list.slug %}" class="w-64 rounded-lg shadow-xl border border-gray-400 mr-4 flex-shrink-0 block">
+    <div class="p-4 shadow-xl transition duration-300 ease-in-out transform hover:shadow-2xl hover:border border-gray-900">
+        <div class="w-54 h-56 rounded-lg overflow-hidden">
+            <img src="{{ list.product.img.url }}" alt="Product Image" class="w-full h-full object-cover">
+        </div>              
+        <h2 class="text-lg font-semibold pt-2">{{ list.product.product_name }}</h2>
+        <!-- Rating -->
+        <div class="flex items-center pt-2">
+            <span class="text-sm text-gray-700">Rating:</span>
+            <div class="pl-1">
+                ★★★★★
+            </div>
+        </div>
+        <p class="text-sm text-gray-700 pt-1">{{ list.product.brand_name }}</p>
+        <p class="text-lg font-semibold pt-1">${{ list.optimized_price }}</p>
+        <p class="pt-2 text-sm font-normal">{{ list.product.desc|slice:80 }}</p>
+    </div>
+</a>
+            {% endfor %}
+                <!-- Card 2 -->
+                <div class="flex justify-center items-center flex-shrink-0 w-64 rounded-lg">
+                    <div class="p-4 h-full flex">
+                        <button class="bg-transparent border border-gray-900 text-gray-900 py-4 px-8 rounded-full hover:bg-red-800 hover:text-white transition duration-300">
+                            More +
+                        </button>                            
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function changeImage(imageUrl) {
+    var mainImage = document.getElementById('mainImage');
+    mainImage.innerHTML = '<img src="' + imageUrl + '" class="w-full h-full object-cover rounded-md">';
+}
+</script>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    // Add custom styles to make Swiper black
+    document.querySelector('.swiper-button-next').style.color = 'black';
+    document.querySelector('.swiper-button-prev').style.color = 'black';
+</script>
+
+{% endblock %}

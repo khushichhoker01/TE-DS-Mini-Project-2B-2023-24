@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="search-main flex flex-col justify-center items-center">
+    <div class="w-4/5 flex flex-col justify-center items-center">
+        <div class="search-result mt-32 flex flex-col w-full">
+            <div class="result-title border-b">
+                <h4 class="text-base">RESULT FOR "{{query}}"</h4>
+            </div>
+
+            <div class="category-all w-full">
+                <div>
+
+                    <div class="wrapper flex flex-wrap gap-4 justify-start pb-8">
+ <!-- Card 1 -->{% for list in product %}
+            <a href="{% url 'product' list.slug %}" class="w-64 rounded-lg shadow-xl border border-gray-400 mr-4 flex-shrink-0 block">
+    <div class="p-4 shadow-xl transition duration-300 ease-in-out transform hover:shadow-2xl hover:border border-gray-900">
+        <div class="w-54 h-56 rounded-lg overflow-hidden">
+            <img src="{{ list.product.img.url }}" alt="Product Image" class="w-full h-full object-cover">
+        </div>              
+        <h2 class="text-lg font-semibold pt-2">{{ list.product.product_name }}</h2>
+        <!-- Rating -->
+        <div class="flex items-center pt-2">
+            <span class="text-sm text-gray-700">Rating:</span>
+            <div class="pl-1">
+                {{list.rating}}/5
+            </div>
+        </div>
+        <p class="text-sm text-gray-700 pt-1">{{ list.product.brand_name }}</p>
+        <p class="text-lg font-semibold pt-1">Rs. {{ optimized_prices|get_item:list.id}}</p>
+        <p class="pt-2 text-sm font-normal">{{ list.product.desc|slice:80 }}</p>
+    </div>
+</a>
+            {% endfor %}
+                        <!-- Card 2 -->
+                        
+                    </div>
+
+                        <!-- Repeat the above card structure for Card 2, 3, 4, and so on -->
+                    </div>
+                    
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>
+{% endblock %}

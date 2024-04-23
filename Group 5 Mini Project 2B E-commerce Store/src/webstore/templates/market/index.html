@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="swiper-container overflow-x-hidden mt-24">
+<div class="swiper-wrapper">
+{% for p in product|slice:":3" %}
+<div class="swiper-slide">
+<div class="h-auto max-h-96 w-full flex flex-row border-b-2 border-black">
+    <div class="flex-1 flex justify-center items-center py-10">
+        <div class="w-full h-full flex flex-col sm:flex-row items-start justify-between mx-auto px-4 sm:px-28 pt-4">
+            <div class="w-full sm:w-1/2 flex flex-col items-start py-18">
+                <h6 class="text-lg mb-2 text-red-600"> SAVE UPTO 50%</h6>
+                <h1 class="font-bold text-3xl sm:text-6xl mb-4 text-gray-900">{{p.product_name}}</h1>
+                <p class="mb-2 text-gray-900">
+                    {{p.desc}}
+                </p>
+                <a href="{% url 'product' p.slug %}">
+                    <button type="button" class="px-6 sm:px-10 py-3 border border-gray-900 text-gray-100 bg-red-700 rounded-full hover:bg-red-800 -ml-1">BUY</button>
+                </a>
+            </div>            
+            <div class="h-full w-full sm:w-1/2 flex flex-col items-center sm:items-end justify-center">
+                <div class="rounded-lg shadow-lg w-full h-64 sm:h-5/6 overflow-hidden">
+                    <img src="{{p.img.url}}" alt="Description of the image" class="mx-auto h-full w-full rounded-lg object-cover">
+                </div>
+            </div>            
+        </div>
+    </div>    
+</div>
+</div>
+
+{% endfor %}
+
+
+
+</div>
+</div>
+{% if user.username %}
+<div class="flex flex-col items-center justify-center">
+    <div class="h-5/6 w-4/5 flex flex-col border-b-2 border-black pb-16 pt-7">
+     <div class="flex flex-col items-center justify-center">
+           
+            <div class="categories-header flex flex-row justify-between items-center w-full pb-10">
+                <div>
+                    <h6>FOR YOU</h6>
+                </div>
+                <div class="flex justify-center items-center flex-wrap">
+                {% for cat in catagory %}
+                    <button type="button" class="px-9 py-1 border border-gray-900 rounded-md text-gray-100 bg-red-600 hover:bg-red-900 mx-1">{{cat.name}}</button>
+                    {% endfor %}
+                </div>
+            </div>
+            
+        </div>
+        <div class="wrapper overflow-x-auto items-center w-full flex flex-row flex-shrink-0">
+        
+            <!-- Card 1 -->{% for list in foryou %}
+            <a href="{% url 'product' list.listing.slug %}" class="w-64 rounded-lg shadow-xl border border-gray-400 mr-4 flex-shrink-0 block">
+    <div class="p-4 shadow-xl transition duration-300 ease-in-out transform hover:shadow-2xl hover:border border-gray-900">
+        <div class="w-54 h-56 rounded-lg overflow-hidden">
+            <img src="{{ list.listing.product.img.url }}" alt="Product Image" class="w-full h-full object-cover">
+        </div>              
+        <h2 class="text-lg font-semibold pt-2">{{ list.listing.product.product_name }}</h2>
+        <!-- Rating -->
+        <div class="flex items-center pt-2">
+            <span class="text-sm text-gray-700">Rating:</span>
+            <div class="pl-1">
+                {{ list.listing.rating }}/5
+            </div>
+        </div>
+        <p class="text-sm text-gray-700 pt-1">{{ list.listing.product.brand_name }}</p>
+        <p class="text-lg font-semibold pt-1">Rs. {{ list.listing.optimized_price }}</p>
+        <p class="pt-2 text-sm font-normal">{{ list.listing.product.desc|slice:80 }}</p>
+    </div>
+</a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endif %}
+<div class="flex flex-col items-center justify-center">
+    <div class="h-5/6 w-4/5 flex flex-col border-b-2 border-black pb-16 pt-7">
+        {% block explore %}
+        <div class="flex flex-col items-center justify-center">
+            <div class="categories-header flex flex-row justify-between items-center w-full pb-10">
+                <div>
+                    <h6>EXPLORE</h6>
+                </div>
+<div class="flex justify-center items-center flex-wrap">
+                {% for cat in catagory %}
+                    <button type="button" class="px-9 py-1 border border-gray-900 rounded-md text-gray-100 bg-red-600 hover:bg-red-900 mx-1">{{cat.name}}</button>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+
+        <div class="wrapper items-center w-full grid grid-cols-5 gap-4">
+             <!-- Card 1 -->{% for list in listings %}
+            <a href="{% url 'product' list.slug %}" class=" w-64 rounded-lg shadow-xl border border-gray-400 mr-4 flex-shrink-0 block">
+    <div class="p-4 shadow-xl transition duration-300 ease-in-out transform hover:shadow-2xl hover:border border-gray-900">
+        <div class="w-54 h-56 rounded-lg overflow-hidden">
+            <img src="{{ list.product.img.url }}" alt="Product Image" class="w-full h-full object-cover">
+        </div>              
+        <h2 class="text-lg font-semibold pt-2">{{ list.product.product_name }}</h2>
+        <!-- Rating -->
+        <div class="flex items-center pt-2">
+            <span class="text-sm text-gray-700">Rating:</span>
+            <div class="pl-1">
+                {{ list.rating }}/5
+            </div>
+        </div>
+        <p class="text-sm text-gray-700 pt-1">{{ list.product.brand_name }}</p>
+        <p class="text-lg font-semibold pt-1">Rs. {{ list.optimized_price }}</p>
+        <p class="pt-2 text-sm font-normal">{{ list.product.desc|slice:80 }}</p>
+    </div>
+</a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true, // Enable loop
+        autoplay: {
+            delay: 5000, // Autoplay delay in milliseconds
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    // Add custom styles to make Swiper buttons black
+    document.querySelector('.swiper-button-next').style.color = 'black';
+    document.querySelector('.swiper-button-prev').style.color = 'black';
+</script>
+
+
+{% endblock %}

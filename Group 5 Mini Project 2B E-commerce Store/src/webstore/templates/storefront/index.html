@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% load static%}
+
+{% block content%}
+
+{% if request.user.is_authenticated %}
+
+{{request.user.username}}
+
+<a href="{% url 'account_logout' %}"> Logout </a> <br>
+
+<a href="{% url 'sellerprofile' %}"> Seller Profile </a>
+
+{% else %}
+
+Index Page <br>
+
+<a href="{% url 'account_login' %}"> Login </a> <br>
+
+<a href="{% url 'reguseller' %}"> Register as Seller </a>
+
+
+
+{% endif %}
+
+
+{% endblock %}
